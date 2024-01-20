@@ -1,0 +1,61 @@
+yarn init -y
+
+yarn add express
+
+yarn add typescript -D
+yarn add @types/express -D
+yarn tsc --init
+yarn add ts-node-dev -D
+
+yarn add eslint --dev
+yarn run eslint --init
+npx install-peerdeps --dev eslint-config-airbnb
+yarn add -D eslint-plugin-import-helpers eslint-import-resolver-typescript
+eslint-plugin-import-helpers - ajuda na ordem dos imports
+eslint-import-resolver-typescript - pra não precisar colocar a extensão .ts nos imports dos arquivos ts
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+
+https://octagonal-way-d8b.notion.site/Game-Api-Public-5b4cb597bce74afbaa209780046233bb
+
+Configurando Husky + Lint-Staged:
+
+npx husky-init && yarn
+yarn add lint-staged -D
+
+Prisma:
+
+yarn add prisma @types/node -D
+yarn add @prisma/client
+npx prisma init
+npx prisma migrate dev
+yarn prisma generate
+npx prisma studio
+
+
+docker: 
+ docker-compose up -d ou docker-compose up --force-recreate
+ Para rodar apenas um serviço específico: docker-compose up database
+
+Injeção de dependência:
+    yarn add tsyringe
+    yarn add reflect-metadata
+
+Validação de dados da requisição:
+    yarn add celebrate
+
+
+Jest:
+    yarn add jest @types/jest -D
+    yarn jest --init
+    yarn add ts-jest -D
+
+babel:
+    yarn add -D @babel/core @babel/preset-env @babel/cli @babel/preset-typescript @babel/plugin-proposal-decorators babel-plugin-transform-typescript-metadata
+
+
+
+
+
+    git rm -r --cached .
