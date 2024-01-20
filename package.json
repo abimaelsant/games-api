@@ -20,7 +20,7 @@
     "postinstall": "yarn prisma:generate",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "dev": "tsnd --exit-child --respawn --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "node dist/shared/infra/http/server.js",
+    "start": "npm run build && node dist/shared/infra/http/server.js",
     "lint": "eslint src/**/*.ts --max-warnings=0",
     "prepare": "husky install",
     "prisma:studio": "prisma studio --schema=./src/shared/infra/prisma/schema.prisma",
